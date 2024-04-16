@@ -1,0 +1,256 @@
+@font-face {
+  font-family: Sarabun-Bold;
+  src: url(./font/Sarabun-Bold.ttf);
+}
+@font-face {
+  font-family: Sarabun-ExtraBold;
+  src: url(./font/Sarabun-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Sarabun-Regular;
+  src: url(./font/Sarabun-Regular.ttf);
+}
+
+body {
+  font-family: "Sarabun-Regular";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e7e8;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  background-color: #ab9b92;
+  height: 2.4rem !important;
+  width: 100%;
+}
+
+ul {
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  display: inline;
+}
+
+.nav-item {
+  padding: 0 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  font-family: "Sarabun-ExtraBold";
+  font-weight: bolder;
+}
+
+.thumbnail {
+  background-color: #f0e7e1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 -2.4rem 0;
+  padding-top: 2.4rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+  padding: 0.8rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: solid 0.2rem #271d17;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.2rem;
+  width: 80%;
+}
+
+.name {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-family: "Sarabun-ExtraBold" !important;
+  color: #271d17;
+}
+
+.job-title {
+  font-family: "Sarabun-Bold" !important;
+  font-size: 1.2rem;
+  color: #896a57;
+}
+
+.btn {
+  margin: 1rem 0;
+}
+
+.downloadbtn {
+  background-color: #ab9b92;
+  color: #fff;
+  border-radius: 0.6rem;
+  border: none;
+  height: 2.4rem;
+}
+
+.downloadbtn:hover {
+  background-color: #896a57;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem 0;
+  width: 60%;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.navdetail {
+  width: 100%;
+  padding-top: 2.8rem;
+}
+
+.detailtitle {
+  font-family: "Sarabun-Bold";
+  font-size: 1.4rem;
+  color: #896a57;
+  margin-bottom: 0.2rem;
+}
+
+.detailbg {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+
+.detailcontent {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.certification-content {
+  display: flex;
+  margin: 0.2rem;
+}
+
+.certification-title {
+  font-weight: bolder;
+  width: 45%;
+}
+
+.certification-description {
+  width: 45%;
+}
+
+.certification-date {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.skilllist {
+  display: flex;
+  width: 100%;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 25%;
+  margin: 0 1.6rem;
+}
+
+.skillname {
+  font-weight: bolder;
+  color: #271d17;
+}
+
+.skillimage {
+  margin-top: 1.2rem;
+}
+
+.skillitem {
+  height: 2.82rem;
+}
+
+.skillitem:hover {
+  transform: scale(1.2);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  margin: 0.4rem;
+  color: #271d17;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.4rem;
+}
+
+.contact-title {
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.contact-content {
+  color: #271d17;
+  font-size: 1rem;
+  text-decoration: none !important;
+}
+
+a:-webkit-any-link {
+  color: #271d17;
+  text-decoration: none !important;
+}
