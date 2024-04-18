@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e4e7e8;
+  margin: 0;
 }
 
 .navbar {
@@ -26,8 +26,9 @@ body {
   justify-content: flex-end;
   align-items: center;
   top: 0;
-  background-color: #ab9b92;
-  height: 2.4rem !important;
+  background-color: #245c00;
+  height: 3.2rem !important;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
@@ -44,35 +45,36 @@ li {
 
 .nav-item {
   padding: 0 1.2rem;
-  color: #fff;
   text-decoration: none;
+  color: #fff !important;
 }
 
 .nav-item:hover {
   font-family: "Sarabun-ExtraBold";
   font-weight: bolder;
+  font-size: large;
 }
 
 .thumbnail {
-  background-color: #f0e7e1;
+  background-color: #e4e7e8;
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 0 0 -2.4rem 0;
-  padding-top: 2.4rem;
+  margin: 0 0 -3.2rem 0;
+  padding-top: 3.2rem;
 }
 
 .profile {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 60%;
-  padding: 0.8rem;
+  width: 70%;
+  padding: 1.2rem;
 }
 
 .avatar {
   border-radius: 50%;
-  border: solid 0.2rem #271d17;
+  border: solid 0.2rem #245c00;
   width: 10rem;
   height: 10rem;
   object-fit: cover;
@@ -89,13 +91,13 @@ li {
   text-transform: uppercase;
   font-size: 2.4rem;
   font-family: "Sarabun-ExtraBold" !important;
-  color: #271d17;
+  color: #245c00;
 }
 
 .job-title {
   font-family: "Sarabun-Bold" !important;
   font-size: 1.2rem;
-  color: #896a57;
+  color: #67a125;
 }
 
 .btn {
@@ -103,15 +105,15 @@ li {
 }
 
 .downloadbtn {
-  background-color: #ab9b92;
+  background-color: #67a125;
   color: #fff;
   border-radius: 0.6rem;
   border: none;
-  height: 2.4rem;
+  padding: 0.6rem;
 }
 
 .downloadbtn:hover {
-  background-color: #896a57;
+  background-color: #245c00;
 }
 
 .container {
@@ -127,8 +129,8 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0.8rem 0;
-  width: 60%;
+  margin: 1.8rem 0;
+  width: 70%;
 }
 
 .detail {
@@ -140,20 +142,21 @@ li {
 
 .navdetail {
   width: 100%;
-  padding-top: 2.8rem;
+  padding-top: 3.2rem;
 }
 
 .detailtitle {
   font-family: "Sarabun-Bold";
   font-size: 1.4rem;
-  color: #896a57;
+  color: #67a125;
   margin-bottom: 0.2rem;
 }
 
 .detailbg {
   width: 100%;
-  background-color: #fff;
+  background-color: #fcfefe;
   border-radius: 0.4rem;
+  border: 0.04rem solid #245c00;
 }
 
 .detailcontent {
@@ -164,6 +167,21 @@ li {
   text-align: justify;
 }
 
+.education-content {
+  display: flex;
+  margin: 0.2rem;
+}
+
+.education-title {
+  font-weight: bolder;
+  color: #245c00;
+  margin-right: 0.2rem;
+}
+
+.education-description :hover {
+  font-size: large;
+}
+
 .certification-content {
   display: flex;
   margin: 0.2rem;
@@ -172,6 +190,7 @@ li {
 .certification-title {
   font-weight: bolder;
   width: 45%;
+  color: #245c00;
 }
 
 .certification-description {
@@ -179,6 +198,62 @@ li {
 }
 
 .certification-date {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+}
+
+.experience-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+}
+
+.experience-company {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-family: "Sarabun-ExtraBold";
+  color: #245c00;
+}
+
+.experience-position {
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: "Sarabun-Bold";
+  color: #67a125;
+}
+
+.experience-time {
+  font-style: italic;
+}
+
+.experience-description {
+  margin-left: 0.4rem;
+}
+
+.achievements-content {
+  display: flex;
+  margin: 0.08rem;
+}
+
+.achievements-title {
+  font-weight: bolder;
+  width: 50%;
+  padding-right: 0.4rem;
+  color: #245c00;
+}
+
+.achievements-description {
+  width: 42%;
+}
+
+.achievements-date {
   display: flex;
   justify-content: flex-end;
   width: 10%;
@@ -205,7 +280,8 @@ li {
 
 .skillname {
   font-weight: bolder;
-  color: #271d17;
+  color: #245c00;
+  font-size: 1.2rem;
 }
 
 .skillimage {
@@ -213,7 +289,8 @@ li {
 }
 
 .skillitem {
-  height: 2.82rem;
+  height: 2.8rem;
+  margin: 0.2rem;
 }
 
 .skillitem:hover {
@@ -230,7 +307,7 @@ li {
   display: flex;
   flex-direction: row;
   margin: 0.4rem;
-  color: #271d17;
+  color: #1a2828;
 }
 
 .icon {
@@ -240,17 +317,18 @@ li {
 }
 
 .contact-title {
+  color: #245c00;
   font-size: 0.8rem;
   font-weight: bolder;
 }
 
 .contact-content {
-  color: #271d17;
+  color: #245c00;
   font-size: 1rem;
   text-decoration: none !important;
 }
 
 a:-webkit-any-link {
-  color: #271d17;
+  color: #245c00;
   text-decoration: none !important;
 }
