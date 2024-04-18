@@ -1,14 +1,14 @@
 @font-face {
   font-family: Sarabun-Bold;
-  src: url(./font/Sarabun-Bold.ttf);
+  src: url(../font/Sarabun-Bold.ttf);
 }
 @font-face {
   font-family: Sarabun-ExtraBold;
-  src: url(./font/Sarabun-ExtraBold.ttf);
+  src: url(../font/Sarabun-ExtraBold.ttf);
 }
 @font-face {
   font-family: Sarabun-Regular;
-  src: url(./font/Sarabun-Regular.ttf);
+  src: url(../font/Sarabun-Regular.ttf);
 }
 
 body {
@@ -309,7 +309,7 @@ li {
 .text {
   display: flex;
   flex-direction: row;
-  margin: 0.8rem;
+  margin: 0.4rem;
   color: #1a2828;
 }
 
