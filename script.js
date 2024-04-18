@@ -1,5 +1,5 @@
 function downloadFile() {
-  var url = "/BusinessAnalyst-TranThiMyHuyen.pdf";
+  var url = "./BusinessAnalyst-TranThiMyHuyen.pdf";
   var filename = "BusinessAnalyst-TranThiMyHuyen.pdf";
   var element = document.createElement("a");
   element.setAttribute("href", url);
