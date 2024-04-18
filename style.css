@@ -33,10 +33,12 @@ body {
 }
 
 ul {
+  display: flex;
+  text-align: center;
   align-items: center;
   flex-direction: row;
   list-style-type: none;
-  margin: 0;
+  margin-right: 2rem;
 }
 
 li {
@@ -44,7 +46,8 @@ li {
 }
 
 .nav-item {
-  padding: 0 1.2rem;
+  cursor: pointer;
+  padding: 0 0.8rem;
   text-decoration: none;
   color: #fff !important;
 }
@@ -306,29 +309,52 @@ li {
 .text {
   display: flex;
   flex-direction: row;
-  margin: 0.4rem;
+  margin: 0.8rem;
   color: #1a2828;
 }
 
 .icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.8rem;
+  height: 2.8rem;
   margin-right: 0.4rem;
 }
 
 .contact-title {
   color: #245c00;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bolder;
 }
 
 .contact-content {
   color: #245c00;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none !important;
 }
 
 a:-webkit-any-link {
   color: #245c00;
   text-decoration: none !important;
+}
+
+#backTop {
+  display: none;
+  position: fixed;
+  bottom: 1.6rem;
+  right: 2rem;
+  z-index: 1;
+  border: none;
+  outline: none;
+  background-color: #67a125;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 0.8rem;
+  border-radius: 100%;
+  width: 3.2rem;
+  height: 3.2rem;
+  opacity: 0.6;
+}
+
+#backTop:hover {
+  background-color: #245c00;
 }
