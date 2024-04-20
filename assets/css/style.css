@@ -20,6 +20,10 @@ body {
   margin: 0;
 }
 
+.menu-btn {
+  display: none;
+}
+
 .navbar {
   display: flex;
   position: fixed;
@@ -113,6 +117,7 @@ li {
   border-radius: 0.6rem;
   border: none;
   padding: 0.6rem;
+  font-size: 0.8rem;
 }
 
 .downloadbtn:hover {
@@ -215,10 +220,6 @@ li {
   margin-right: 0.2rem;
 }
 
-.education-description :hover {
-  font-size: large;
-}
-
 .skills {
   display: flex;
   flex-direction: row;
@@ -264,43 +265,50 @@ li {
 
 .certification-title {
   font-weight: bolder;
-  width: 50%;
+  width: 45vw;
   color: #245c00;
 }
 
+.certification-title:hover {
+  color: #67a125;
+}
+
 .certification-description {
-  width: 40%;
+  width: 45vw;
 }
 
 .certification-date {
   display: flex;
   justify-content: flex-end;
-  width: 10%;
+  width: 10vw;
 }
 
 .achievements-content {
   display: flex;
   justify-content: space-between;
   margin: 0.08rem;
-  width: 100%;
 }
 
 .achievements-title {
   font-weight: bolder;
-  width: 45%;
+  width: 50vw;
   padding-right: 0.8rem;
   color: #245c00;
 }
 
+.achievements-title:hover {
+  color: #67a125;
+}
+
 .achievements-description {
-  width: 40%;
+  width: 40vw;
   padding-right: 0.8rem;
 }
 
 .achievements-date {
   display: flex;
   justify-content: flex-end;
-  width: 10%;
+  width: 10vw;
 }
 
 .contact {
@@ -360,4 +368,217 @@ a:-webkit-any-link {
 
 #backTop:hover {
   background-color: #245c00;
+}
+
+/* Điều chỉnh các phần tử trong phần detail */
+@media screen and (max-width: 768px) {
+  .detailtitle {
+    font-size: 1.2rem;
+  }
+  .detailcontent {
+    font-size: 0.9rem;
+  }
+}
+
+/* CSS for responsive button "Go to top" */
+@media screen and (max-width: 768px) {
+  #backTop {
+    display: block;
+  }
+}
+
+/* CSS for responsive navbar and menu button */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #245c00;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .nav-list.show {
+    display: block;
+  }
+
+  .nav-item {
+    display: block;
+    padding: 0.4rem 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .menu-btn {
+    z-index: 100;
+    display: block;
+    background-color: #245c00;
+    border: none;
+    color: #fff;
+    margin: 0.4rem;
+  }
+}
+
+/* CSS for responsive thumbnail */
+@media screen and (max-width: 768px) {
+  .thumbnail {
+    padding-top: 3.2rem;
+  }
+
+  .profile {
+    width: 70vw;
+  }
+
+  .avatar {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .job-title {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .downloadbtn {
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    font-size: 0.6rem;
+  }
+}
+
+/* CSS for responsive content */
+@media screen and (max-width: 768px) {
+  .content {
+    margin: 2.4rem 0;
+    width: 70vw;
+  }
+
+  .navdetail {
+    padding-top: 1.6rem;
+  }
+
+  .detailtitle {
+    font-size: 1.2rem;
+  }
+
+  .detailbg {
+    border-radius: 0.6rem;
+  }
+
+  .detailcontent {
+    font-size: 0.8rem;
+  }
+
+  .experience-content {
+    margin: 0.2rem 0;
+  }
+
+  .experience-company {
+    font-size: 1rem;
+  }
+
+  .experience-position {
+    font-size: 0.8rem;
+  }
+
+  .experience-description {
+    margin-left: 0rem;
+  }
+
+  .education-content {
+    margin: 0.08rem;
+  }
+
+  .skill {
+    margin: 0 0.2rem;
+    justify-content: space-between;
+  }
+
+  .skillname {
+    font-size: 0.8rem;
+  }
+
+  .skillimage {
+    margin: 0.4rem 0.8rem 0 0.8rem;
+  }
+
+  .skillitem {
+    height: 1rem;
+    margin: 0.08rem;
+  }
+
+  .certification-content {
+    margin: 0.08rem;
+    font-size: 0.8rem;
+  }
+
+  .certification-title {
+    padding-right: 0.4rem;
+    width: 45vw;
+  }
+
+  .certification-description {
+    padding-right: 0.4rem;
+    width: 40vw;
+  }
+
+  .certification-date {
+    width: 15vw;
+  }
+
+  .achievements-content {
+    margin: 0.08rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .achievements-title {
+    padding-right: 0.4rem;
+  }
+
+  .achievements-description {
+    padding-right: 0.4rem;
+  }
+
+  .achievements-date {
+    width: 15vw;
+  }
+
+  .text {
+    margin: 0.2rem;
+  }
+
+  .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.2rem;
+  }
+
+  .contact {
+    grid-template-columns: auto;
+  }
+  .contact-title {
+    font-size: 0.8rem;
+  }
+
+  .contact-content {
+    font-size: 0.8rem;
+  }
 }

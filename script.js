@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menu-btn");
+  const navList = document.querySelector(".nav-list");
+  const navItems = document.querySelectorAll(".nav-item");
+
+  // Toggle menu visibility when menu button is clicked
+  menuBtn.addEventListener("click", function () {
+    navList.classList.toggle("show");
+  });
+
+  // Hide menu when a menu item is clicked
+  navItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      navList.classList.remove("show");
+    });
+  });
+
+  // Hide menu when clicking outside of it
+  document.body.addEventListener("click", function (event) {
+    if (!menuBtn.contains(event.target) && !navList.contains(event.target)) {
+      navList.classList.remove("show");
+    }
+  });
+});
+
 function downloadFile() {
   var url = "./BusinessAnalyst-TranThiMyHuyen.pdf";
   var filename = "BusinessAnalyst-TranThiMyHuyen.pdf";
