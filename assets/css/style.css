@@ -71,7 +71,7 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 70%;
+  width: 60vw;
   padding: 1.2rem;
 }
 
@@ -133,7 +133,7 @@ li {
   justify-content: center;
   align-items: center;
   margin: 1.8rem 0;
-  width: 70%;
+  width: 60vw;
 }
 
 .detail {
@@ -170,42 +170,6 @@ li {
   text-align: justify;
 }
 
-.education-content {
-  display: flex;
-  margin: 0.2rem;
-}
-
-.education-title {
-  font-weight: bolder;
-  color: #245c00;
-  margin-right: 0.2rem;
-}
-
-.education-description :hover {
-  font-size: large;
-}
-
-.certification-content {
-  display: flex;
-  margin: 0.2rem;
-}
-
-.certification-title {
-  font-weight: bolder;
-  width: 45%;
-  color: #245c00;
-}
-
-.certification-description {
-  width: 45%;
-}
-
-.certification-date {
-  display: flex;
-  justify-content: flex-end;
-  width: 10%;
-}
-
 .experience-group {
   display: flex;
   flex-direction: column;
@@ -240,26 +204,19 @@ li {
   margin-left: 0.4rem;
 }
 
-.achievements-content {
+.education-content {
   display: flex;
-  margin: 0.08rem;
+  margin: 0.2rem;
 }
 
-.achievements-title {
+.education-title {
   font-weight: bolder;
-  width: 50%;
-  padding-right: 0.4rem;
   color: #245c00;
+  margin-right: 0.2rem;
 }
 
-.achievements-description {
-  width: 42%;
-}
-
-.achievements-date {
-  display: flex;
-  justify-content: flex-end;
-  width: 10%;
+.education-description :hover {
+  font-size: large;
 }
 
 .skills {
@@ -288,7 +245,7 @@ li {
 }
 
 .skillimage {
-  margin: 1.2rem 1.2rem 0 1.2rem;
+  margin: 0.8rem 1.2rem 0 1.2rem;
 }
 
 .skillitem {
@@ -298,6 +255,52 @@ li {
 
 .skillitem:hover {
   transform: scale(1.2);
+}
+
+.certification-content {
+  display: flex;
+  margin: 0.2rem;
+}
+
+.certification-title {
+  font-weight: bolder;
+  width: 50%;
+  color: #245c00;
+}
+
+.certification-description {
+  width: 40%;
+}
+
+.certification-date {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+}
+
+.achievements-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.08rem;
+  width: 100%;
+}
+
+.achievements-title {
+  font-weight: bolder;
+  width: 45%;
+  padding-right: 0.8rem;
+  color: #245c00;
+}
+
+.achievements-description {
+  width: 40%;
+  padding-right: 0.8rem;
+}
+
+.achievements-date {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
 }
 
 .contact {
@@ -327,7 +330,7 @@ li {
 
 .contact-content {
   color: #245c00;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none !important;
 }
 
