@@ -31,7 +31,7 @@ body {
   align-items: center;
   top: 0;
   background-color: #245c00;
-  height: 3.2rem !important;
+  height: 3.2rem;
   margin-bottom: 2rem;
   width: 100%;
 }
@@ -386,7 +386,7 @@ a:-webkit-any-link {
     right: 0;
     background-color: #245c00;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.2rem 0;
     text-align: center;
     z-index: 1;
   }
@@ -402,6 +402,7 @@ a:-webkit-any-link {
   }
 
   .navbar {
+    height: 2rem;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -420,7 +421,7 @@ a:-webkit-any-link {
 /* CSS for responsive thumbnail */
 @media screen and (max-width: 768px) {
   .thumbnail {
-    padding-top: 3.2rem;
+    padding-top: 2rem;
   }
 
   .profile {
@@ -460,7 +461,7 @@ a:-webkit-any-link {
   }
 
   .navdetail {
-    padding-top: 1.6rem;
+    padding-top: 2rem;
   }
 
   .detailtitle {
