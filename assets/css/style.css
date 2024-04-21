@@ -180,18 +180,18 @@ li {
   flex-direction: column;
 }
 
-.experience-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0.4rem 0;
-}
-
 .experience-company {
   font-size: 1.2rem;
   font-weight: bolder;
   font-family: "Sarabun-ExtraBold";
   color: #245c00;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.4rem 0;
 }
 
 .experience-position {
@@ -370,16 +370,6 @@ a:-webkit-any-link {
   background-color: #245c00;
 }
 
-/* Điều chỉnh các phần tử trong phần detail */
-@media screen and (max-width: 768px) {
-  .detailtitle {
-    font-size: 1.2rem;
-  }
-  .detailcontent {
-    font-size: 0.9rem;
-  }
-}
-
 /* CSS for responsive button "Go to top" */
 @media screen and (max-width: 768px) {
   #backTop {
@@ -403,6 +393,7 @@ a:-webkit-any-link {
 
   .nav-list.show {
     display: block;
+    margin: 0;
   }
 
   .nav-item {
@@ -433,7 +424,7 @@ a:-webkit-any-link {
   }
 
   .profile {
-    width: 70vw;
+    width: 80vw;
   }
 
   .avatar {
@@ -442,7 +433,7 @@ a:-webkit-any-link {
   }
 
   .name {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .job-title {
@@ -465,7 +456,7 @@ a:-webkit-any-link {
 @media screen and (max-width: 768px) {
   .content {
     margin: 2.4rem 0;
-    width: 70vw;
+    width: 80vw;
   }
 
   .navdetail {
@@ -481,19 +472,26 @@ a:-webkit-any-link {
   }
 
   .detailcontent {
+    padding: 0.6rem;
     font-size: 0.8rem;
-  }
-
-  .experience-content {
-    margin: 0.2rem 0;
   }
 
   .experience-company {
     font-size: 1rem;
   }
 
+  .experience-content {
+    flex-direction: column;
+    margin: 0.08rem 0;
+  }
+
   .experience-position {
     font-size: 0.8rem;
+  }
+
+  .experience-time {
+    font-style: normal;
+    font-size: 0.68rem;
   }
 
   .experience-description {
@@ -504,9 +502,15 @@ a:-webkit-any-link {
     margin: 0.08rem;
   }
 
+  .skilllist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .skill {
-    margin: 0 0.2rem;
-    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
   }
 
   .skillname {
@@ -514,55 +518,62 @@ a:-webkit-any-link {
   }
 
   .skillimage {
-    margin: 0.4rem 0.8rem 0 0.8rem;
+    margin: 0 0 0 0.8rem;
+    display: flex;
+    align-items: center;
   }
 
   .skillitem {
     height: 1rem;
-    margin: 0.08rem;
+    margin: 0.1rem 0.2rem;
+    justify-content: center;
   }
 
   .certification-content {
-    margin: 0.08rem;
+    flex-direction: column;
     font-size: 0.8rem;
   }
 
   .certification-title {
-    padding-right: 0.4rem;
-    width: 45vw;
+    width: 100%;
   }
 
   .certification-description {
-    padding-right: 0.4rem;
-    width: 40vw;
+    font-style: italic;
+    width: 100%;
+    margin-left: 0.4rem;
   }
 
   .certification-date {
-    width: 15vw;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 0.4rem;
   }
 
   .achievements-content {
     margin: 0.08rem;
     font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
   }
 
   .achievements-title {
-    padding-right: 0.4rem;
+    width: 100%;
   }
 
   .achievements-description {
-    padding-right: 0.4rem;
+    font-style: italic;
+    width: 100%;
+    margin-left: 0.4rem;
   }
 
   .achievements-date {
-    width: 15vw;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 0.4rem;
   }
 
   .text {
-    margin: 0.2rem;
+    margin: 0.2rem 0;
   }
 
   .icon {
