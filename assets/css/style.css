@@ -75,7 +75,7 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 60vw;
+  width: 70vw;
   padding: 1.2rem;
 }
 
@@ -138,7 +138,7 @@ li {
   justify-content: center;
   align-items: center;
   margin: 1.8rem 0;
-  width: 60vw;
+  width: 70vw;
 }
 
 .detail {
@@ -301,14 +301,14 @@ li {
 }
 
 .achievements-description {
-  width: 40vw;
+  width: 42vw;
   padding-right: 0.8rem;
 }
 
 .achievements-date {
   display: flex;
   justify-content: flex-end;
-  width: 10vw;
+  width: 8vw;
 }
 
 .contact {
