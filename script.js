@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navList.classList.remove("show");
     }
   });
+  countVisits();
 });
 
 function downloadFile() {
