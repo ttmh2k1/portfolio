@@ -1,3 +1,5 @@
+const token = process.env.GITHUB_TOKEN;
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menu-btn");
   const navList = document.querySelector(".nav-list");
@@ -58,7 +60,7 @@ function updateViewCount() {
       fetch(repoUrl, {
         method: "PUT",
         headers: {
-          Authorization: "token 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",
+          Authorization: `token ${token}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify(content),
