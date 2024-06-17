@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navList.classList.remove("show");
     }
   });
-  countVisits();
 });
 
 function downloadFile() {
@@ -36,19 +35,53 @@ function downloadFile() {
   document.body.removeChild(element);
 }
 
-function countVisits() {
-  // Kiểm tra xem LocalStorage đã có key 'page_view' chưa
-  if (localStorage.page_view) {
-    // Nếu có, tăng giá trị lên 1
-    localStorage.page_view = Number(localStorage.page_view) + 1;
-  } else {
-    // Nếu chưa có, khởi tạo giá trị là 1
-    localStorage.page_view = 1;
-  }
-  // Hiển thị số lượt truy cập
-  document.getElementById("visitCount").innerText =
-    "Views: " + localStorage.page_view;
+function updateViewCount() {
+  // GitHub repository URL
+  const repoUrl =
+    "https://api.github.com/repos/ttmh2k1/portfolio/contents/viewCount.json";
+
+  // Make GET request to fetch current view count
+  fetch(repoUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const currentCount = parseInt(atob(data.content)); // Decode base64 content
+      const updatedCount = currentCount + 1;
+
+      // Update view count in the JSON content
+      const content = {
+        message: "Increment view count",
+        content: btoa(JSON.stringify({ count: updatedCount })),
+        sha: data.sha,
+      };
+
+      // Make PUT request to update view count
+      fetch(repoUrl, {
+        method: "PUT",
+        headers: {
+          Authorization: "token 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",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(content),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          document.getElementById("viewCount").textContent = updatedCount;
+        })
+        .catch((error) => {
+          console.error("Error updating view count:", error);
+        });
+    })
+    .catch((error) => {
+      console.error("Error fetching view count:", error);
+    });
 }
+
+// Call updateViewCount function on page load
+window.onload = function () {
+  updateViewCount();
+};
 
 window.onscroll = function () {
   scrollFunction();
