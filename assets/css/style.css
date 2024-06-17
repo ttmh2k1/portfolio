@@ -124,6 +124,13 @@ li {
   background-color: #245c00;
 }
 
+.visitCountTitle {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  color: #245c00;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -452,8 +459,8 @@ a:-webkit-any-link {
     font-size: 0.6rem;
   }
 
-  .visitCount {
-    font-size: 6rem !important;
+  .visitCountTitle {
+    font-size: 0.8rem;
   }
 }
 
