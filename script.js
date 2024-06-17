@@ -37,13 +37,17 @@ function downloadFile() {
 }
 
 function countVisits() {
-  fetch("/api/visitCount")
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("visitCount").textContent = data.count;
-    });
-
-  fetch("/api/visitCount", { method: "POST" });
+  // Kiểm tra xem LocalStorage đã có key 'page_view' chưa
+  if (localStorage.page_view) {
+    // Nếu có, tăng giá trị lên 1
+    localStorage.page_view = Number(localStorage.page_view) + 1;
+  } else {
+    // Nếu chưa có, khởi tạo giá trị là 1
+    localStorage.page_view = 1;
+  }
+  // Hiển thị số lượt truy cập
+  document.getElementById("visitCount").innerText =
+    "Views: " + localStorage.page_view;
 }
 
 window.onscroll = function () {
