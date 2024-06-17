@@ -451,6 +451,10 @@ a:-webkit-any-link {
     padding: 0.4rem;
     font-size: 0.6rem;
   }
+
+  .visitCount {
+    font-size: 6rem !important;
+  }
 }
 
 /* CSS for responsive content */
