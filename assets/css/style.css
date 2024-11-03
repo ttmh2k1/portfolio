@@ -216,6 +216,34 @@ li {
   margin-left: 0.4rem;
 }
 
+.project-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-family: "Sarabun-Bold";
+  color: #245c00;
+}
+
+.project-time {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.project-description {
+  margin-left: 0.4rem;
+}
+
 .education-content {
   display: flex;
   margin: 0.2rem;
@@ -507,6 +535,24 @@ a:-webkit-any-link {
   }
 
   .experience-description {
+    margin-left: 0rem;
+  }
+
+  .project-content {
+    flex-direction: column;
+    margin: 0.08rem 0;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-time {
+    font-style: normal;
+    font-size: 0.68rem;
+  }
+
+  .project-description {
     margin-left: 0rem;
   }
 
