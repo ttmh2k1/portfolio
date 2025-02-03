@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function downloadFile() {
-  var url = "./TranThiMyHuyen-BusinessAnalyst.pdf";
-  var filename = "TranThiMyHuyen-BusinessAnalyst.pdf";
+  var url = "./TranThiMyHuyen-Business Analyst.pdf";
+  var filename = "TranThiMyHuyen-Business Analyst.pdf";
   var element = document.createElement("a");
   element.setAttribute("href", url);
   element.setAttribute("download", filename);
@@ -51,3 +51,26 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
+    }
+  });
+}
+
+function plusSlides(n) {
+  const slides = document.querySelectorAll(".slide");
+  currentSlide = (currentSlide + n + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Hiển thị slide đầu tiên khi tải trang
+document.addEventListener("DOMContentLoaded", () => {
+  showSlide(currentSlide);
+});

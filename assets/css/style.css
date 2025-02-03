@@ -34,6 +34,7 @@ body {
   height: 3.2rem;
   margin-bottom: 2rem;
   width: 100%;
+  z-index: 10;
 }
 
 ul {
@@ -244,6 +245,74 @@ li {
   margin-left: 0.4rem;
 }
 
+.product-slide {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-group {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  display: none; /* Mặc định ẩn */
+}
+
+.slide.active {
+  display: flex; /* Hiển thị slide đang active */
+}
+
+.product-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-family: "Sarabun-Bold";
+  color: #245c00;
+}
+
+.product-time {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.product-description {
+  margin: 0.4rem 1.2rem;
+}
+
+.product-figma {
+  border: 0.08rem solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 28rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  background-color: #fff;
+  color: #245c00;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 0.2rem;
+}
+
+.next {
+  right: 0.2rem;
+}
+
 .education-content {
   display: flex;
   margin: 0.2rem;
@@ -270,7 +339,7 @@ li {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 25%;
+  width: 25vw;
   margin: 0 0.4rem;
 }
 
@@ -285,7 +354,7 @@ li {
 }
 
 .skillitem {
-  height: 2.8rem;
+  height: 2.4rem;
   margin: 0.2rem;
 }
 
@@ -295,12 +364,14 @@ li {
 
 .certification-content {
   display: flex;
+  justify-content: space-between;
   margin: 0.2rem;
 }
 
 .certification-title {
   font-weight: bolder;
   width: 45vw;
+  padding-right: 0.8rem;
   color: #245c00;
 }
 
@@ -309,7 +380,8 @@ li {
 }
 
 .certification-description {
-  width: 45vw;
+  width: 42vw;
+  padding-right: 0.8rem;
 }
 
 .certification-date {
@@ -326,7 +398,7 @@ li {
 
 .achievements-title {
   font-weight: bolder;
-  width: 50vw;
+  width: 45vw;
   padding-right: 0.8rem;
   color: #245c00;
 }
@@ -336,14 +408,14 @@ li {
 }
 
 .achievements-description {
-  width: 42vw;
+  width: 45vw;
   padding-right: 0.8rem;
 }
 
 .achievements-date {
   display: flex;
   justify-content: flex-end;
-  width: 8vw;
+  width: 10vw;
 }
 
 .contact {
@@ -556,6 +628,49 @@ a:-webkit-any-link {
     margin-left: 0rem;
   }
 
+  .product-content {
+    flex-direction: row;
+    margin: 0.08rem 0;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .product-time {
+    font-style: normal;
+    font-size: 0.68rem;
+  }
+
+  .product-description {
+    margin: 0.2rem 0.8rem;
+  }
+
+  .product-figma {
+    border: 0.08rem solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 24rem;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    color: #245c00;
+    font-size: 0.8rem;
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
   .education-content {
     margin: 0.08rem;
   }
@@ -572,6 +687,8 @@ a:-webkit-any-link {
   }
 
   .skillname {
+    display: flex;
+    width: 30vw;
     font-size: 0.8rem;
   }
 
