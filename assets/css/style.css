@@ -258,7 +258,7 @@ li {
 }
 
 .slide {
-  display: none; /* Mặc định ẩn */
+  display: none;
 }
 
 .slide.active {
