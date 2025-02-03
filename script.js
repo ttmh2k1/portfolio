@@ -70,7 +70,6 @@ function plusSlides(n) {
   showSlide(currentSlide);
 }
 
-// Hiển thị slide đầu tiên khi tải trang
 document.addEventListener("DOMContentLoaded", () => {
   showSlide(currentSlide);
 });
