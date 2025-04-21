@@ -11,13 +11,16 @@
   src: url(../font/Sarabun-Regular.ttf);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Sarabun-Regular";
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  background: #fff8f2;
+  color: #000;
 }
 
 .menu-btn {
@@ -25,230 +28,553 @@ body {
 }
 
 .navbar {
-  display: flex;
-  position: fixed;
-  justify-content: flex-end;
-  align-items: center;
+  position: sticky;
   top: 0;
-  background-color: #245c00;
-  height: 3.2rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  z-index: 10;
+  z-index: 100;
+  padding: 1.2rem 2rem;
+  text-align: right;
+  background-color: #fefae0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-ul {
+.nav-list {
+  list-style: none;
   display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: row;
-  list-style-type: none;
-  margin-right: 2rem;
-}
-
-li {
-  display: inline;
+  gap: 1.4rem;
+  justify-content: flex-end;
 }
 
 .nav-item {
-  cursor: pointer;
-  padding: 0 0.8rem;
   text-decoration: none;
-  color: #fff !important;
+  color: #bc6c25;
+  font-size: 1rem;
 }
 
 .nav-item:hover {
   font-family: "Sarabun-ExtraBold";
-  font-weight: bolder;
-  font-size: large;
-}
-
-.thumbnail {
-  background-color: #e4e7e8;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 0 -3.2rem 0;
-  padding-top: 3.2rem;
+  font-size: medium;
 }
 
 .profile {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 70vw;
-  padding: 1.2rem;
+  justify-content: space-between;
+  padding: 5.2rem 3.6rem;
+  position: relative;
 }
 
-.avatar {
+.profile-image {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.profile-image img {
+  position: relative;
+  max-height: 46rem;
+  z-index: 1;
+  filter: drop-shadow(0.8rem 0.08rem #dda15e);
+}
+
+.profile-design {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14rem;
+  height: 2.8rem;
+  background: transparent;
+  border: 0.6rem solid #dda15e;
   border-radius: 50%;
-  border: solid 0.2rem #245c00;
-  width: 10rem;
-  height: 10rem;
-  object-fit: cover;
+  z-index: 1;
 }
 
-.info {
+.profile-background {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36rem;
+  height: 40rem;
+  border-radius: 60% 60% 4% 4%;
+  background: #dda15e;
+  opacity: 30%;
+}
+
+.profile-content {
+  flex: 1;
+  padding-left: 1.6rem;
+  padding-right: 4rem;
+}
+
+.profile-content h1 {
+  font-family: "Sarabun-ExtraBold";
+  font-size: 3.2rem;
+  color: #606c38;
+}
+
+.profile-content h1 span {
+  font-family: "Sarabun-ExtraBold";
+  color: #dda15e;
+  font-size: 3.6rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.profile-content p {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+.getstarted {
+  padding-top: 2.8rem;
+}
+
+.startedbtn {
+  background-color: #bc6c25;
+  color: #fff;
+  border-radius: 1.6rem;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+}
+
+.startedbtn:hover {
+  background-color: #dda15e;
+}
+
+.aboutme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5.2rem 3.6rem;
+  position: relative;
+}
+
+.about-content {
   display: flex;
   flex-direction: column;
-  margin-left: 1.2rem;
-  width: 80%;
+  flex: 2;
+  text-align: justify;
+  padding-left: 4rem;
 }
 
-.name {
-  text-transform: uppercase;
-  font-size: 2.4rem;
-  font-family: "Sarabun-ExtraBold" !important;
-  color: #245c00;
+.about-me {
+  flex: 2;
 }
 
-.job-title {
-  font-family: "Sarabun-Bold" !important;
+.about-me h1 {
+  font-family: "Sarabun-Bold";
+  font-size: 2.8rem;
+  color: #606c38;
+}
+
+.about-me p {
   font-size: 1.2rem;
-  color: #67a125;
+  text-align: justify;
+  margin: 2rem 2.8rem 0 0;
+  line-height: 1.6;
 }
 
-.btn {
-  margin: 1rem 0;
+.education {
+  flex: 1;
+  line-height: 1.6;
+  padding-top: 2.8rem;
+}
+
+.education h1 {
+  font-family: "Sarabun-Bold";
+  font-size: 2.8rem;
+  color: #606c38;
+}
+
+.major {
+  font-family: "Sarabun-Bold";
+  font-size: 1.6rem;
+  color: #93987c;
+}
+
+.university {
+  font-size: 1.2rem;
+}
+
+.gpa {
+  font-size: 1.2rem;
+  color: #606c38;
+}
+
+.down-btn {
+  padding-top: 2.8rem;
 }
 
 .downloadbtn {
-  background-color: #67a125;
+  background-color: #606c38;
   color: #fff;
-  border-radius: 0.6rem;
+  border-radius: 1.6rem;
   border: none;
-  padding: 0.6rem;
-  font-size: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
 }
 
 .downloadbtn:hover {
-  background-color: #245c00;
+  background-color: #283618;
 }
 
-.visitCountTitle {
+.about-image {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  position: relative;
+  max-height: 48rem;
+  border-radius: 60%;
+  border: solid 0.2rem #283618;
+  transform: rotate(5deg);
+  z-index: 1;
+}
+
+.about-design {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20rem;
+  height: 4.2rem;
+  background: transparent;
+  border: 0.6rem solid #dda15e;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.2rem 3.6rem;
+}
+
+.skills h1 {
+  font-family: "Sarabun-ExtraBold";
+  font-size: 2.8rem;
+  color: #606c38;
+}
+
+.skill-list {
   display: flex;
   flex-direction: row;
-  font-size: 1rem;
-  color: #245c00;
-}
-
-.container {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
   width: 100%;
 }
 
-.content {
+.skill-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1.8rem 0;
-  width: 70vw;
+  justify-content: flex-start;
+  margin: 2.4rem;
+  border-radius: 1.2rem;
 }
 
-.detail {
+.skill-name {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 100%;
-}
-
-.navdetail {
-  width: 100%;
-  padding-top: 3.2rem;
-}
-
-.detailtitle {
   font-family: "Sarabun-Bold";
-  font-size: 1.4rem;
-  color: #67a125;
-  margin-bottom: 0.2rem;
+  font-size: 1.6rem;
+  color: #93987c;
+  margin: 0.4rem;
 }
 
-.detailbg {
-  width: 100%;
-  background-color: #fcfefe;
-  border-radius: 0.4rem;
-  border: 0.04rem solid #245c00;
-}
-
-.detailcontent {
+.skill-image {
   display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  font-size: 1rem;
-  text-align: justify;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem;
 }
 
-.experience-group {
+.skill-item {
+  height: 3.2rem;
+  margin: 0.8rem;
+}
+
+.skill-item:hover {
+  transform: scale(1.2);
+}
+
+.workexperience {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5.2rem 3.6rem;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
-.experience-company {
-  font-size: 1.2rem;
-  font-weight: bolder;
+.experience h1 {
   font-family: "Sarabun-ExtraBold";
-  color: #245c00;
+  font-size: 2.8rem;
+  color: #606c38;
+}
+
+.experience-open {
+  font-family: "Sarabun-Bold";
+  font-size: 2rem;
+  color: #dda15e;
+  margin: 2rem;
+}
+
+.experience-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  position: relative;
+  padding: 0 4rem;
+  gap: 4rem;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: #606c38;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.timeline-step::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #93987c;
+  border-radius: 50%;
+  margin-bottom: 0.4rem;
+  z-index: 2;
+}
+
+.experience-timeline::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  height: 0.2rem;
+  background-color: #606c38;
+  z-index: 1;
+}
+
+.timeline-step.active {
+  color: #bc6c25;
+  font-weight: bold;
+}
+
+.timeline-step.active::before {
+  background-color: #bc6c25;
 }
 
 .experience-content {
   display: flex;
   flex-direction: row;
+  font-size: 1.2rem;
+}
+
+.experience-bg {
+  width: 42rem;
+  height: 32rem;
+  margin: 2rem;
+  background-color: #fbeee1;
+  border-radius: 1.2rem;
+  border: 0.04rem solid #606c38;
+}
+
+.experience-bg:hover {
+  cursor: pointer;
+  border: 0.2rem solid #606c38;
+}
+
+.experience-chosen {
+  background-color: #eff2d9;
+  border: 0.4rem solid #bc6c25;
+}
+
+.experience-group {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+}
+
+.experience-company {
+  font-size: 1.6rem;
+  font-family: "Sarabun-ExtraBold";
+  color: #dda15e;
+}
+
+.experience-title {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 0.4rem 0;
+  align-items: center;
+  padding: 0.6rem 0;
 }
 
 .experience-position {
-  font-size: 1rem;
-  font-weight: bolder;
+  font-size: 1.4rem;
   font-family: "Sarabun-Bold";
-  color: #67a125;
+  color: #bc6c25;
 }
 
 .experience-time {
+  font-size: 1.2rem;
   font-style: italic;
 }
 
 .experience-description {
-  margin-left: 0.4rem;
+  text-align: justify;
+  font-size: 1.2rem;
+  list-style: circle;
+  line-height: 2rem;
+}
+
+.experience-button {
+  display: flex;
+}
+
+.experience-section {
+  display: flex;
+  padding: 0.4rem;
+}
+
+.slide-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  border: 0.04rem #bc6c25 solid;
+  background-color: #dda15e;
+  color: #fff;
+}
+
+.slide-btn:hover {
+  background-color: #bc6c25;
+}
+
+.mb_experience-content {
+  display: none;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.2rem 3.6rem;
+}
+
+.projects h1 {
+  font-family: "Sarabun-ExtraBold";
+  font-size: 2.8rem;
+  color: #606c38;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem;
 }
 
 .project-group {
-  display: flex;
+  width: 45%;
+  display: block;
   flex-direction: column;
+  margin: 0.8rem;
+  padding: 0.8rem 2rem;
+  background-color: #fbeee1;
+  border-radius: 1.2rem;
+  border: 0.04rem solid #606c38;
 }
 
-.project-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0;
+.project-group:hover {
+  cursor: pointer;
+  border: 0.2rem solid #606c38;
 }
 
 .project-title {
-  font-size: 1.2rem;
-  font-weight: bolder;
-  font-family: "Sarabun-Bold";
-  color: #245c00;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0.2rem 0;
+}
+
+.project-name {
+  font-size: 1.4rem;
+  font-family: "Sarabun-ExtraBold";
+  color: #bc6c25;
+}
+
+a:-webkit-any-link {
+  color: #bc6c25;
+  text-decoration: none !important;
 }
 
 .project-time {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
 }
 
 .project-description {
-  margin-left: 0.4rem;
+  text-align: justify;
+  font-size: 1.2rem;
+  list-style: circle;
+  line-height: 2rem;
 }
 
-.product-slide {
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.2rem 3.6rem;
+}
+
+.products h1 {
+  font-family: "Sarabun-ExtraBold";
+  font-size: 2.8rem;
+  color: #606c38;
+}
+
+.product-list {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
+  margin: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #fbeee1;
+  border-radius: 1.2rem;
+  border: 0.04rem solid #606c38;
 }
 
 .product-group {
@@ -265,22 +591,22 @@ li {
   display: flex; /* Hiển thị slide đang active */
 }
 
-.product-content {
+.product-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0;
+  align-items: end;
+  padding: 0.2rem 0;
 }
 
-.product-title {
-  font-size: 1.2rem;
-  font-weight: bolder;
-  font-family: "Sarabun-Bold";
-  color: #245c00;
+.product-name {
+  font-size: 1.4rem;
+  font-family: "Sarabun-ExtraBold";
+  color: #bc6c25;
 }
 
 .product-time {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
 }
 
@@ -289,169 +615,129 @@ li {
 }
 
 .product-figma {
+  border-radius: 1.2rem;
   border: 0.08rem solid rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: 28rem;
+  height: 40rem;
 }
 
 .prev,
 .next {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  cursor: pointer;
   top: 50%;
-  background-color: #fff;
-  color: #245c00;
-  font-size: 1.2rem;
+  padding: 0.4rem;
+  color: #bc6c25;
+  font-size: 1.6rem;
   border-radius: 50%;
 }
 
 .prev {
-  left: 0.2rem;
+  left: 0.4rem;
 }
 
 .next {
-  right: 0.2rem;
-}
-
-.education-content {
-  display: flex;
-  margin: 0.2rem;
-}
-
-.education-title {
-  font-weight: bolder;
-  color: #245c00;
-  margin-right: 0.2rem;
-}
-
-.skills {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.skilllist {
-  display: flex;
-  width: 100%;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 25vw;
-  margin: 0 0.4rem;
-}
-
-.skillname {
-  font-weight: bolder;
-  color: #245c00;
-  font-size: 1.2rem;
-}
-
-.skillimage {
-  margin: 0.8rem 1.2rem 0 1.2rem;
-}
-
-.skillitem {
-  height: 2.4rem;
-  margin: 0.2rem;
-}
-
-.skillitem:hover {
-  transform: scale(1.2);
-}
-
-.certification-content {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.2rem;
-}
-
-.certification-title {
-  font-weight: bolder;
-  width: 45vw;
-  padding-right: 0.8rem;
-  color: #245c00;
-}
-
-.certification-title:hover {
-  color: #67a125;
-}
-
-.certification-description {
-  width: 42vw;
-  padding-right: 0.8rem;
-}
-
-.certification-date {
-  display: flex;
-  justify-content: flex-end;
-  width: 10vw;
-}
-
-.achievements-content {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.08rem;
-}
-
-.achievements-title {
-  font-weight: bolder;
-  width: 45vw;
-  padding-right: 0.8rem;
-  color: #245c00;
-}
-
-.achievements-title:hover {
-  color: #67a125;
-}
-
-.achievements-description {
-  width: 45vw;
-  padding-right: 0.8rem;
-}
-
-.achievements-date {
-  display: flex;
-  justify-content: flex-end;
-  width: 10vw;
+  right: 0.4rem;
 }
 
 .contact {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5.2rem 3.6rem 0 3.6rem;
+  position: relative;
 }
 
-.text {
+.contact-info {
+  flex: 1;
+  padding: 0 4rem;
+}
+
+.contact-info h1 {
+  font-family: "Sarabun-ExtraBold";
+  font-size: 3.6rem;
+  color: #606c38;
+}
+
+.contact-info span {
+  font-family: "Sarabun-Bold";
+  color: #dda15e;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  text-align: justify;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  line-height: 1.6;
+  color: #283618;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.contact-group {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin: 0.4rem;
-  color: #1a2828;
+  color: #606c38;
 }
 
 .icon {
   width: 2.8rem;
   height: 2.8rem;
-  margin-right: 0.4rem;
+  margin-right: 0.8rem;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4rem;
+  color: #bc6c25;
 }
 
 .contact-title {
-  color: #245c00;
-  font-size: 1rem;
-  font-weight: bolder;
+  width: 6rem;
 }
 
 .contact-content {
-  color: #245c00;
-  font-size: 1rem;
+  color: #bc6c25;
   text-decoration: none !important;
+  cursor: pointer;
 }
 
-a:-webkit-any-link {
-  color: #245c00;
-  text-decoration: none !important;
+.contact-image {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.contact-image img {
+  position: relative;
+  max-height: 48rem;
+  z-index: 1;
+  filter: drop-shadow(0.8rem 0.08rem #dda15e);
+}
+
+.contact-background {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background: #dda15e;
+  opacity: 30%;
 }
 
 #backTop {
@@ -462,40 +748,468 @@ a:-webkit-any-link {
   z-index: 1;
   border: none;
   outline: none;
-  background-color: #67a125;
+  background-color: #dda15e;
   color: white;
   text-align: center;
   cursor: pointer;
-  padding-left: 0.8rem;
+  padding-left: 0.6rem;
   border-radius: 100%;
-  width: 3.2rem;
-  height: 3.2rem;
-  opacity: 0.6;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
-#backTop:hover {
-  background-color: #245c00;
-}
-
-/* CSS for responsive button "Go to top" */
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   #backTop {
     display: block;
   }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.6rem 2rem;
+  }
+
+  .nav-list {
+    gap: 0.8rem;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
+  }
+
+  .nav-item:hover {
+    font-size: small;
+  }
+
+  .profile {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .profile-image img {
+    max-height: 24rem;
+    filter: drop-shadow(0.4rem 0.04rem #dda15e);
+  }
+
+  .profile-design {
+    top: -1.2rem;
+    width: 8rem;
+    height: 1.6rem;
+    border: 0.2rem solid #dda15e;
+  }
+
+  .profile-background {
+    width: 18rem;
+    height: 20rem;
+  }
+
+  .profile-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .profile-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-content h1 span {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 0.4rem;
+  }
+
+  .profile-content p {
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .getstarted {
+    padding-top: 1.2rem;
+  }
+
+  .startedbtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .aboutme {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .about-content {
+    padding-left: 2rem;
+  }
+
+  .about-me h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-me p {
+    font-size: 0.8rem;
+    margin: 0.8rem 0 0;
+  }
+
+  .education {
+    padding-top: 0.8rem;
+  }
+
+  .education h1 {
+    font-size: 1.4rem;
+  }
+
+  .major {
+    font-size: 1rem;
+  }
+
+  .university {
+    font-size: 0.8rem;
+  }
+
+  .gpa {
+    font-size: 0.8rem;
+  }
+
+  .down-btn {
+    padding-top: 2rem;
+  }
+
+  .downloadbtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .about-image {
+    padding-left: 2rem;
+  }
+
+  .about-image img {
+    max-height: 24rem;
+    transform: rotate(10deg);
+  }
+
+  .about-design {
+    bottom: -0.4rem;
+    width: 10rem;
+    height: 1.6rem;
+    border: 0.2rem solid #dda15e;
+  }
+
+  .skills {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .skills h1 {
+    font-size: 1.6rem;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .skill-group {
+    margin: 1.2rem 0rem;
+    border-radius: 0.8rem;
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+  }
+
+  .skill-image {
+    margin: 0.4rem;
+  }
+
+  .skill-item {
+    height: 3.2rem;
+    margin: 1.2rem;
+  }
+
+  .skill-item:hover {
+    transform: scale(1.2);
+  }
+
+  .workexperience {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .experience h1 {
+    font-size: 1.6rem;
+  }
+
+  .experience-open {
+    font-size: 1.2rem;
+    margin: 1.2rem;
+  }
+
+  .experience-timeline {
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .timeline-step {
+    font-size: 0.8rem;
+  }
+
+  .timeline-step::before {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+
+  .experience-timeline::after {
+    height: 0.1rem;
+  }
+
+  .experience-content {
+    font-size: 0.8rem;
+  }
+
+  .experience-bg {
+    width: 42vw;
+    min-height: 28vh;
+    max-height: 46vh;
+    margin: 1.2rem;
+    border-radius: 0.8rem;
+    border: 0.02rem solid #606c38;
+  }
+
+  .experience-chosen {
+    border: 0.02rem solid #bc6c25;
+  }
+
+  .experience-group {
+    padding: 0.8rem;
+  }
+
+  .experience-company {
+    font-size: 1.2rem;
+  }
+
+  .experience-title {
+    padding: 0.4rem 0;
+  }
+
+  .experience-position {
+    font-size: 1rem;
+  }
+
+  .experience-time {
+    font-size: 0.8rem;
+  }
+
+  .experience-description {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .mb_experience-content {
+    display: none;
+  }
+
+  .experience-section {
+    display: flex;
+    padding: 0.2rem;
+  }
+
+  .slide-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .projects {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .projects h1 {
+    font-size: 1.6rem;
+  }
+
+  .project-list {
+    margin: 0.8rem;
+  }
+
+  .project-group {
+    margin: 0.4rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.8rem;
+    border: 0.02rem solid #606c38;
+  }
+
+  .project-title {
+    padding: 0.2rem 0;
+  }
+
+  .project-name {
+    font-size: 1rem;
+  }
+
+  .project-time {
+    font-size: 0.8rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .products {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .products h1 {
+    font-size: 1.6rem;
+  }
+
+  .product-list {
+    border-radius: 0.8rem;
+    border: 0.02rem solid #606c38;
+  }
+
+  .product-group {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .product-title {
+    padding: 0.2rem 0;
+  }
+
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .product-time {
+    font-size: 0.8rem;
+  }
+
+  .product-figma {
+    border-radius: 0.8rem;
+    border: 0.08rem solid #dda15e;
+    width: 100%;
+    height: 36rem;
+  }
+
+  .prev,
+  .next {
+    padding: 0.2rem;
+    color: #bc6c25;
+    font-size: 1.2rem;
+  }
+
+  .prev {
+    left: 0.4rem;
+  }
+
+  .next {
+    right: 0.4rem;
+  }
+
+  .contact {
+    padding: 5.2rem 3.6rem 0 3.6rem;
+  }
+
+  .contact-info {
+    flex: 1;
+    padding: 0;
+  }
+
+  .contact-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-info span {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .contact-list {
+    padding: 0.8rem;
+  }
+
+  .contact-group {
+    margin: 0.2rem;
+  }
+
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.4rem;
+  }
+
+  .contact-detail {
+    font-size: 0.8rem;
+  }
+
+  .contact-title {
+    display: none;
+  }
+
+  .contact-content {
+    text-decoration: none !important;
+  }
+
+  .contact-image {
+    display: flex;
+    position: relative;
+    flex: 1;
+    align-items: flex-end;
+  }
+
+  .contact-image img {
+    max-height: 24rem;
+  }
+
+  .contact-background {
+    top: 2rem;
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
-/* CSS for responsive navbar and menu button */
-@media screen and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
+  #backTop {
+    display: block;
+  }
+
+  .navbar {
+    padding: 1.2rem 0rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .menu-btn {
+    display: block;
+    border: none;
+    background-color: #fefae0;
+    color: #bc6c25;
+    padding: 0;
+    margin: 0.4rem;
+  }
+
   .nav-list {
     display: none;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #245c00;
+    background-color: #fefae0;
     width: 100%;
-    padding: 0.2rem 0;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
   }
 
   .nav-list.show {
@@ -508,157 +1222,320 @@ a:-webkit-any-link {
     padding: 0.4rem 0;
   }
 
-  .navbar {
-    height: 2rem;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .menu-btn {
-    z-index: 100;
-    display: block;
-    background-color: #245c00;
-    border: none;
-    color: #fff;
-    margin: 0.4rem;
-  }
-}
-
-/* CSS for responsive thumbnail */
-@media screen and (max-width: 768px) {
-  .thumbnail {
-    padding-top: 2rem;
-  }
-
   .profile {
-    width: 80vw;
+    flex-direction: column;
+    padding: 2rem 3.2rem;
   }
 
-  .avatar {
+  .profile-image img {
+    display: flex;
+    max-height: 20rem;
+    filter: drop-shadow(0.4rem 0.04rem #dda15e);
+    z-index: 1;
+  }
+
+  .profile-design {
+    top: -1.2rem;
     width: 6rem;
-    height: 6rem;
+    height: 1.2rem;
+    border: 0.2rem solid #dda15e;
+    z-index: 0;
   }
 
-  .name {
-    font-size: 1rem;
+  .profile-background {
+    bottom: 0rem;
+    width: 16rem;
+    height: 16rem;
   }
 
-  .job-title {
-    font-size: 0.8rem;
+  .profile-content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.2rem;
   }
 
-  .btn {
-    font-size: 0.8rem;
-    margin: 0.8rem 0;
-  }
-
-  .downloadbtn {
-    border-radius: 0.4rem;
-    padding: 0.4rem;
-    font-size: 0.6rem;
-  }
-
-  .visitCountTitle {
-    font-size: 0.8rem;
-  }
-}
-
-/* CSS for responsive content */
-@media screen and (max-width: 768px) {
-  .content {
-    margin: 2.4rem 0;
-    width: 80vw;
-  }
-
-  .navdetail {
-    padding-top: 2rem;
-  }
-
-  .detailtitle {
+  .profile-content h1 {
     font-size: 1.2rem;
   }
 
-  .detailbg {
-    border-radius: 0.6rem;
+  .profile-content h1 span {
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin-top: 0.4rem;
   }
 
-  .detailcontent {
-    padding: 0.6rem;
+  .profile-content p {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .getstarted {
+    padding-top: 1.2rem;
+  }
+
+  .startedbtn {
+    padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
   }
 
-  .experience-company {
+  .aboutme {
+    flex-direction: column;
+    padding: 1.2rem 3.2rem;
+  }
+
+  .about-content {
+    text-align: justify;
+    padding-left: 0;
+  }
+
+  .about-me h1 {
+    font-size: 1.2rem;
+  }
+
+  .about-me p {
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+
+  .education {
+    padding-top: 1.2rem;
+  }
+
+  .education h1 {
+    font-size: 1.2rem;
+  }
+
+  .major {
+    font-size: 0.8rem;
+  }
+
+  .university {
+    font-size: 0.8rem;
+  }
+
+  .gpa {
+    font-size: 0.8rem;
+  }
+
+  .down-btn {
+    padding-top: 1.2rem;
+  }
+
+  .downloadbtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .skills {
+    padding: 2rem 3.2rem;
+  }
+
+  .skills h1 {
+    font-size: 1.2rem;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .skill-group {
+    margin: 0.4rem 0rem;
+    border-radius: 0.8rem;
+  }
+
+  .skill-name {
     font-size: 1rem;
+  }
+
+  .skill-image {
+    margin: 0.2rem;
+  }
+
+  .skill-item {
+    height: 2rem;
+    margin: 0.4rem;
+  }
+
+  .workexperience {
+    padding: 1.2rem 3.2rem;
+  }
+
+  .experience h1 {
+    font-size: 1.2rem;
+  }
+
+  .experience-open {
+    font-family: "Sarabun-Regular";
+    font-size: 1rem;
+    margin: 0.8rem 0;
+  }
+
+  .experience-timeline {
+    display: none;
   }
 
   .experience-content {
-    flex-direction: column;
-    margin: 0.08rem 0;
+    display: none;
   }
 
-  .experience-position {
+  .mb_experience-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mb_experience-bg {
+    display: flex;
+    min-width: fit-content;
+    height: fit-content;
+    margin: 0.2rem 0;
+    padding: 0.2rem;
     font-size: 0.8rem;
+    background-color: #fbeee1;
+    border-radius: 0.8rem;
+    border: 0.04rem solid #606c38;
   }
 
-  .experience-time {
-    font-style: normal;
-    font-size: 0.68rem;
-  }
-
-  .experience-description {
-    margin-left: 0rem;
-  }
-
-  .project-content {
+  .mb_experience-group {
+    display: flex;
     flex-direction: column;
-    margin: 0.08rem 0;
+    padding: 0.4rem;
+  }
+
+  .mb_experience-company {
+    font-size: 1rem;
+    font-family: "Sarabun-ExtraBold";
+    color: #dda15e;
+  }
+
+  .mb_experience-title {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+  }
+
+  .mb_experience-position {
+    font-size: 1rem;
+    font-family: "Sarabun-Bold";
+    color: #bc6c25;
+  }
+
+  .mb_experience-time {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  .mb_experience-description {
+    text-align: justify;
+    font-size: 0.8rem;
+    list-style: circle;
+    line-height: 1.2rem;
+  }
+
+  .experience-button {
+    display: none;
+  }
+
+  .projects {
+    padding: 1.2rem 3.2rem;
+  }
+
+  .projects h1 {
+    font-size: 1.2rem;
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 1.2rem 0;
+  }
+
+  .project-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem 0;
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+    border: 0.04rem solid #606c38;
   }
 
   .project-title {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.2rem 0;
+  }
+
+  .project-name {
     font-size: 1rem;
+    font-family: "Sarabun-Bold";
   }
 
   .project-time {
-    font-style: normal;
-    font-size: 0.68rem;
+    font-size: 0.8rem;
   }
 
   .project-description {
-    margin-left: 0rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
 
-  .product-content {
-    flex-direction: row;
-    margin: 0.08rem 0;
+  .products {
+    padding: 1.2rem 3.2rem;
+  }
+
+  .products h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-list {
+    width: 100%;
+    border-radius: 0.8rem;
+    border: 0.02rem solid #606c38;
+  }
+
+  .product-group {
+    transition: transform 0.3s ease-in-out;
   }
 
   .product-title {
+    padding: 0.2rem 0;
+  }
+
+  .product-name {
     font-size: 1rem;
   }
 
   .product-time {
     font-style: normal;
-    font-size: 0.68rem;
+    font-size: 0.8rem;
   }
 
   .product-description {
-    margin: 0.2rem 0.8rem;
+    margin: 0.2rem 0rem;
   }
 
   .product-figma {
-    border: 0.08rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+    border: 0.08rem solid #dda15e;
     width: 100%;
     height: 24rem;
   }
 
   .prev,
   .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    background-color: #fff;
-    color: #245c00;
     font-size: 0.8rem;
     border-radius: 50%;
   }
@@ -671,100 +1548,64 @@ a:-webkit-any-link {
     right: 0;
   }
 
-  .education-content {
-    margin: 0.08rem;
+  .contact {
+    padding: 1.2rem 3.2rem 0 3.2rem;
   }
 
-  .skilllist {
+  .contact-info {
+    flex: 1;
+    padding: 0;
+  }
+
+  .contact-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info span {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .contact-info p {
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .contact-list {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    text-align: justify;
+    padding: 0.8rem;
   }
 
-  .skill {
+  .contact-group {
+    display: flex;
     flex-direction: row;
-    width: 100%;
-  }
-
-  .skillname {
-    display: flex;
-    width: 30vw;
-    font-size: 0.8rem;
-  }
-
-  .skillimage {
-    margin: 0 0 0 0.8rem;
-    display: flex;
     align-items: center;
-  }
-
-  .skillitem {
-    height: 1rem;
-    margin: 0.1rem 0.2rem;
-    justify-content: center;
-  }
-
-  .certification-content {
-    flex-direction: column;
-    font-size: 0.8rem;
-  }
-
-  .certification-title {
-    width: 100%;
-  }
-
-  .certification-description {
-    font-style: italic;
-    width: 100%;
-    margin-left: 0.4rem;
-  }
-
-  .certification-date {
-    justify-content: flex-start;
-    width: 100%;
-    margin-left: 0.4rem;
-  }
-
-  .achievements-content {
-    margin: 0.08rem;
-    font-size: 0.8rem;
-    flex-direction: column;
-  }
-
-  .achievements-title {
-    width: 100%;
-  }
-
-  .achievements-description {
-    font-style: italic;
-    width: 100%;
-    margin-left: 0.4rem;
-  }
-
-  .achievements-date {
-    justify-content: flex-start;
-    width: 100%;
-    margin-left: 0.4rem;
-  }
-
-  .text {
-    margin: 0.2rem 0;
+    margin: 0.4rem;
+    color: #606c38;
   }
 
   .icon {
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-right: 0.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.4rem;
   }
 
-  .contact {
-    grid-template-columns: auto;
-  }
-  .contact-title {
+  .contact-detail {
     font-size: 0.8rem;
+  }
+
+  .contact-title {
+    display: none;
   }
 
   .contact-content {
-    font-size: 0.8rem;
+    text-decoration: none !important;
+  }
+
+  .contact-image {
+    display: none;
   }
 }
