@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function downloadFile() {
-  var url = "./TranThiMyHuyen-Business Analyst.pdf";
-  var filename = "TranThiMyHuyen-Business Analyst.pdf";
+  var url = "./CV-TranThiMyHuyen-Business Analyst.pdf";
+  var filename = "CV-TranThiMyHuyen-Business Analyst.pdf";
   var element = document.createElement("a");
   element.setAttribute("href", url);
   element.setAttribute("download", filename);

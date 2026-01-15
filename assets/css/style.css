@@ -445,6 +445,7 @@ body {
 
 .experience-description {
   text-align: justify;
+  margin-left: 0.8rem;
   font-size: 1.2rem;
   list-style: circle;
   line-height: 2rem;
@@ -501,7 +502,7 @@ body {
   justify-content: center;
   text-align: justify;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.2rem;
   margin: 2rem;
 }
 
@@ -547,6 +548,7 @@ a:-webkit-any-link {
 
 .project-description {
   text-align: justify;
+  margin-left: 0.4rem;
   font-size: 1.2rem;
   list-style: circle;
   line-height: 2rem;
@@ -1004,6 +1006,7 @@ a:-webkit-any-link {
   }
 
   .experience-description {
+    margin-left: 0.8rem;
     font-size: 0.8rem;
     line-height: 1.4rem;
   }
@@ -1036,12 +1039,16 @@ a:-webkit-any-link {
 
   .project-group {
     margin: 0.4rem;
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 0.8rem;
     border: 0.02rem solid #606c38;
   }
 
   .project-title {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 0.2rem 0;
   }
 
@@ -1055,6 +1062,7 @@ a:-webkit-any-link {
 
   .project-description {
     font-size: 0.8rem;
+    margin-left: 0.8rem;
     line-height: 1.4rem;
   }
 
@@ -1435,6 +1443,7 @@ a:-webkit-any-link {
 
   .mb_experience-description {
     text-align: justify;
+    margin-left: 0.8rem;
     font-size: 0.8rem;
     list-style: circle;
     line-height: 1.2rem;
@@ -1473,6 +1482,7 @@ a:-webkit-any-link {
   }
 
   .project-title {
+    font-size: 0.8rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -1490,6 +1500,8 @@ a:-webkit-any-link {
 
   .project-description {
     font-size: 0.8rem;
+    margin-left: 1.2rem;
+    margin-right: 0.4rem;
     line-height: 1.2rem;
   }
 
